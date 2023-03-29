@@ -1,6 +1,6 @@
 import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
-const {width: windowWidth, height: windowHeight} = Dimensions.get('window');
+const {width: windowWidth} = Dimensions.get('window');
 
 export const Container = styled.SafeAreaView<{color?: string}>`
   flex: 1;
@@ -38,7 +38,6 @@ export const Description = styled.Text`
 `;
 
 export const PrivacyText = styled.Text`
-  /* font-family: 'Roboto'; */
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -47,4 +46,9 @@ export const PrivacyText = styled.Text`
   letter-spacing: 0.5px;
 
   color: #1a1a1a;
+`;
+
+export const ButtonWrapper = styled.View`
+  width: 80%;
+  gap: 18px;
 `;

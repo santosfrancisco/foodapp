@@ -79,19 +79,19 @@ export const SlideThreeScreen = () => {
         <SC.Description>
           we have 5000+ users review, you can check in app store
         </SC.Description>
-        <View style={{width: '80%'}}>
+        <SC.ButtonWrapper>
           <Button
             title="Get Started"
             onPress={() => navigation.navigate('GetStarted')}
           />
-        </View>
+        </SC.ButtonWrapper>
       </SC.Content>
     </SC.Container>
   );
 };
 
 export const OnboardingScreen: React.FC = () => {
-  const {width: windowWidth, height: windowHeight} = Dimensions.get('window');
+  const {width: windowWidth} = Dimensions.get('window');
   const ref = useRef<ScrollView>();
 
   const goToSlide = (slideIndex: number) => {
@@ -101,12 +101,12 @@ export const OnboardingScreen: React.FC = () => {
   };
 
   return (
-    <View style={{flex: 1}}>
+    <SC.OnboardingContainer>
       <Carousel ref={ref}>
         <SlideOneScreen onNextPress={goToSlide} />
         <SlideTwoScreen onNextPress={goToSlide} />
         <SlideThreeScreen />
       </Carousel>
-    </View>
+    </SC.OnboardingContainer>
   );
 };

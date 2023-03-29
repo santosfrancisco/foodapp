@@ -1,6 +1,10 @@
 import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
-const {width: windowWidth, height: windowHeight} = Dimensions.get('window');
+const {width: windowWidth} = Dimensions.get('window');
+
+export const OnboardingContainer = styled.View`
+  flex: 1;
+`;
 
 export const Container = styled.SafeAreaView<{color?: string}>`
   flex: 1;
@@ -48,4 +52,8 @@ export const Description = styled.Text`
 
   color: #1a1a1a;
   width: 70%;
+`;
+
+export const ButtonWrapper = styled.View`
+  width: 80%;
 `;

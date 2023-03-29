@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {TextInputProps, View} from 'react-native';
-import {ClosedEyeIcon} from '../icons/closedEye';
-import {EyeIcon} from '../icons/eye';
+import {ClosedEyeIcon} from '../icons/ClosedEye';
+import {EyeIcon} from '../icons/Eye';
 
 import * as SC from './Input.styles';
 

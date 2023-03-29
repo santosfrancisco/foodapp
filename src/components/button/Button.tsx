@@ -6,12 +6,28 @@ type ButtonProps = {
   onPress: () => void;
   outlined?: boolean;
   disabled?: boolean;
+  small?: boolean;
+  fullWidth?: boolean;
 };
 
-export const Button = ({title, onPress, outlined, disabled}: ButtonProps) => {
+export const Button = ({
+  title,
+  onPress,
+  outlined,
+  disabled,
+  small,
+  fullWidth,
+}: ButtonProps) => {
   return (
-    <Container onPress={onPress} outlined={outlined} disabled={disabled}>
-      <Title outlined={outlined}>{title}</Title>
+    <Container
+      onPress={onPress}
+      outlined={outlined}
+      disabled={disabled}
+      small={small}
+      fullWidth={fullWidth}>
+      <Title outlined={outlined} small={small}>
+        {title}
+      </Title>
     </Container>
   );
 };

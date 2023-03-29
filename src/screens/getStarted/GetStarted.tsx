@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Image} from 'react-native';
+import {Image} from 'react-native';
 import {Button} from '../../components/button';
 import * as SC from './GetStarted.styles';
 
@@ -14,7 +14,7 @@ export const GetStartedScreen = () => {
         <SC.Description>
           Come join us now create an account or log in.
         </SC.Description>
-        <View style={{width: '80%', gap: 18}}>
+        <SC.ButtonWrapper>
           <Button
             outlined
             title="Login"
@@ -24,7 +24,7 @@ export const GetStartedScreen = () => {
             title="Sign up"
             onPress={() => navigation.navigate('SignUp')}
           />
-        </View>
+        </SC.ButtonWrapper>
       </SC.Content>
       <SC.PrivacyText>
         By signing up accept the Terms of Service and Privacy Policy.

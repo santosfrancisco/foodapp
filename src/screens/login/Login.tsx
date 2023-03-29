@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {View, Image} from 'react-native';
+import {Image} from 'react-native';
 import {Button} from '../../components/button';
 import {Input} from '../../components/input';
 import * as SC from './Login.styles';
@@ -15,7 +15,7 @@ export const LoginScreen = () => {
         <Image source={require('../../assets/images/food.png')} />
         <SC.Title>Hello Again!</SC.Title>
         <SC.Subtitle>Welcome back you’ve been missed!</SC.Subtitle>
-        <View style={{width: '80%', gap: 18}}>
+        <SC.InputsContainer>
           <Input
             label="Username"
             placeholder="username"
@@ -28,16 +28,17 @@ export const LoginScreen = () => {
             secureTextEntry={true}
           />
           <Button
+            fullWidth
             disabled={!username || !password}
             title="Login"
             onPress={() =>
               navigation.reset({
                 index: 1,
-                routes: [{name: 'Home'}],
+                routes: [{name: 'App'}],
               })
             }
           />
-        </View>
+        </SC.InputsContainer>
       </SC.Content>
       <SC.SignUpText>
         Don’t have an account?{' '}

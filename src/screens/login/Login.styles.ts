@@ -1,6 +1,6 @@
 import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
-const {width: windowWidth, height: windowHeight} = Dimensions.get('window');
+const {width: windowWidth} = Dimensions.get('window');
 
 export const Container = styled.SafeAreaView<{color?: string}>`
   flex: 1;
@@ -56,4 +56,8 @@ export const SignUpTextLink = styled.Text`
   text-align: center;
   letter-spacing: 0.5px;
   color: #1a1a1a;
+`;
+export const InputsContainer = styled.View`
+  width: 80%;
+  gap: 18px;
 `;

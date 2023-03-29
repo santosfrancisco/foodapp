@@ -25,6 +25,7 @@ export const Carousel: React.FC<CarouselProps> = forwardRef<
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         onScroll={handleScroll}
+        scrollEventThrottle={100}
         {...rest}>
         {children}
       </ScrollView>
